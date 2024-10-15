@@ -1,0 +1,61 @@
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: rgba(70, 0, 78, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    padding: 20px; /* Adds some space around the content */
+    border: 2px solid rgba(0, 3, 75, 0.479);
+  }
+  
+  .title-text {
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 5px;
+    text-align: center;
+  }
+  
+  /* Styles for max-width 1025px */
+  @media (max-width: 1025px) {
+    .title-text {
+      font-size: 3.5rem; /* Slightly smaller font */
+      letter-spacing: 4px; /* Adjust letter spacing */
+    }
+  
+    .title-container {
+      padding: 15px;
+    }
+  }
+  
+  /* Styles for max-width 768px */
+  @media (max-width: 768px) {
+    .title-text {
+      font-size: 3rem; /* Smaller font */
+      letter-spacing: 3px; /* Adjust letter spacing */
+    }
+  
+    .title-container {
+      padding: 10px;
+      height: 80px; /* Reduce height */
+    }
+  }
+  
+  /* Styles for max-width 600px */
+  @media (max-width: 600px) {
+    .title-text {
+      font-size: 2.5rem; /* Even smaller font */
+      letter-spacing: 2px; /* Adjust letter spacing */
+    }
+  
+    .title-container {
+      padding: 8px;
+      height: 70px; /* Further reduce height */
+      border-radius: 8px; /* Slightly smaller radius */
+    }
+  }
+  

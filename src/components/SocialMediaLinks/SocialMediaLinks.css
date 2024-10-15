@@ -1,0 +1,154 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #060417;
+    position: relative;
+  }
+  
+  .box {
+    position: relative;
+    width: 300px;
+    padding: 30px;
+    background-color: rgba(0, 39, 60, 0.248); /* Slight transparency */
+    backdrop-filter: blur(100px); /* Blur effect */
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Transparent border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow */
+    text-align: center;
+    z-index: 1; /* Ensures the box is above the before/after elements */
+  }
+  
+  /* Glowing circles */
+  .box::before,
+  .box::after {
+    content: "";
+    width: 38.125rem;
+    height: 38.125rem;
+    border-radius: 50%;
+    background: #7c66e3;
+    position: fixed;
+    filter: blur(170px);
+    z-index: 0; /* Places it behind everything */
+  }
+  
+  .box::before {
+    top: -20rem;
+    left: -50rem;
+  }
+  
+  .box::after {
+    bottom: -20rem;
+    right: -36rem;
+  }
+  
+  .heading {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .socialMediaList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #007bff;
+  }
+  
+  .icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .text {
+    font-size: 18px;
+  }
+  
+  /* Media queries for responsiveness */
+  
+  /* For devices with a max-width of 1025px */
+  @media (max-width: 1025px) {
+    .box {
+      width: 260px; /* Adjust box size */
+      padding: 20px;
+    }
+  
+    .box::before, .box::after {
+      width: 30rem;
+      height: 30rem;
+      filter: blur(150px); /* Adjust the glow */
+    }
+  
+    .text {
+      font-size: 16px; /* Adjust text size */
+    }
+  }
+  
+  /* For devices with a max-width of 768px */
+  @media (max-width: 768px) {
+    .box {
+      width: 240px; /* Smaller box */
+      padding: 15px;
+    }
+  
+    .box::before, .box::after {
+      width: 25rem;
+      height: 25rem;
+      filter: blur(120px); /* Adjust the glow */
+    }
+  
+    .text {
+      font-size: 15px;
+    }
+  
+    .link {
+      gap: 8px; /* Reduce gap between icon and text */
+    }
+  
+    .icon {
+      transform: scale(0.9); /* Slightly smaller icons */
+    }
+  }
+  
+  /* For devices with a max-width of 600px */
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column; /* Stack content vertically */
+    }
+  
+    .box {
+      width: 220px; /* Smaller box */
+      padding: 10px;
+    }
+  
+    .box::before, .box::after {
+      width: 20rem;
+      height: 20rem;
+      filter: blur(100px); /* Adjust the glow */
+    }
+  
+    .text {
+      font-size: 14px;
+    }
+  
+    .link {
+      gap: 6px;
+    }
+  
+    .icon {
+      transform: scale(0.8); /* Smaller icons */
+    }
+  }
+  
